@@ -7,7 +7,8 @@ const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
     const [token, setToken] = useState(localStorage.getItem('token'));
-    const [plan, setPlan] = useState('FREE');
+    const [plan, setPlan] = useState(
+    localStorage.getItem('plan') || 'FREE');
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
@@ -26,7 +27,9 @@ export function AuthProvider({ children }) {
     const fetchSubscription = async () => {
         try {
             const res = await api.get('/api/subscription');
-            setPlan(res.data.planType || 'FREE');
+            const currentPlan = res.data.planType || 'FREE';
+            setPlan(currentPlan);
+            localStorage.setItem('plan', currentPlan);
         } catch (err) {
             console.error("Failed to fetch subscription", err);
             setPlan('FREE');
