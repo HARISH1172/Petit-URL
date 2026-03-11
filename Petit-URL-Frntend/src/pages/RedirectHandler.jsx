@@ -9,7 +9,7 @@ export default function RedirectHandler() {
     useEffect(() => {
         if (shortCode) {
             // Redirect the window to the backend which will handle the 302 redirect
-            const backendUrl = api.defaults.baseURL || 'http://localhost:8080';
+            const backendUrl = api.defaults.baseURL || 'https://petit-url.onrender.com';
             window.location.replace(`${backendUrl}/${shortCode}`);
         }
     }, [shortCode]);
