@@ -29,6 +29,7 @@ export function AuthProvider({ children }) {
             setPlan(res.data.planType || 'FREE');
         } catch (err) {
             console.error("Failed to fetch subscription", err);
+            setPlan('FREE');
         }
     };
 
