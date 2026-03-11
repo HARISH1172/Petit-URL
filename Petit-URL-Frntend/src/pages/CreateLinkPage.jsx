@@ -75,7 +75,7 @@ export default function CreateLinkPage() {
     return (
         <div className="mx-auto max-w-2xl">
             {/* Header */}
-            <div className="mb-8">
+            <div className="mb-8 text-center">
                 <h1 className="text-2xl font-bold text-gray-900">Create Short Link</h1>
                 <p className="mt-1 text-sm text-gray-500">
                     Paste a long URL and get a short, shareable link instantly.

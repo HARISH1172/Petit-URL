@@ -70,7 +70,7 @@ export default function MyLinksPage() {
     return (
         <div>
             {/* Header */}
-            <div className="mb-8">
+            <div className="mb-8 text-center">
                 <h1 className="text-2xl font-bold text-gray-900">My Links</h1>
                 <p className="mt-1 text-sm text-gray-500">
                     Manage and track all your shortened URLs.
