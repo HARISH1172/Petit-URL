@@ -13,7 +13,7 @@ export default function AppRouter() {
     return (
         <Routes>
             {/* Public Routes */}
-            <Route path="/login" element={<PublicRoute><LoginPage /></PublicRoute>} />
+            <Route path="/" element={<PublicRoute><LoginPage /></PublicRoute>} />
             <Route path="/signup" element={<PublicRoute><SignupPage /></PublicRoute>} />
 
             {/* Protected Dashboard Routes */}
