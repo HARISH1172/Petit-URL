@@ -77,7 +77,7 @@ export function AuthProvider({ children }) {
         localStorage.removeItem('token');
         setPlan('FREE');
         toast.success('Logged out successfully.');
-        navigate('/login');
+        navigate('/');
     };
 
     return (
