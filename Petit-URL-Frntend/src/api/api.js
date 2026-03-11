@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = "https://petit-url.onrender.com";
+const API_BASE_URL = "VITE_API_URL";
 
 const api = axios.create({
     baseURL: API_BASE_URL,
